@@ -13,6 +13,16 @@ WorkBuddy 看板客户端：签到、积分余额、宠物旅行。本机运行�
 
 客户端在进程内起一个只监听 `127.0.0.1` 的 HTTP 服务，窗口指向它。数据全在本机。
 
+## 界面
+
+| 聚合看板 | 每日签到 |
+|:--:|:--:|
+| <img src="assets/screens/02-aggregate.png" width="330"> | <img src="assets/screens/01-checkin.png" width="330"> |
+| **单账户** | **深色模式** |
+| <img src="assets/screens/03-single.png" width="330"> | <img src="assets/screens/04-dark.png" width="330"> |
+
+签到按账户独立调度，自动时段内随机取一个时刻；多账户在聚合页汇总，点账户行直接切过去。
+
 ## 开发态
 
 ```bash

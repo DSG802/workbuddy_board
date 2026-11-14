@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WorkBuddy 看板</string>
+    <string name="booting">正在启动…</string>
+    <string name="boot_failed">启动失败</string>
+    <string name="retry">重试</string>
+</resources>

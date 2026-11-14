@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>WorkBuddy 看板 · 图标样品 v2</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:radial-gradient(120% 60% at 50% 0%,#1a2236 0%,#0b0e17 55%,#070910 100%);
+    color:#e8edf7;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;padding:44px 40px 64px;
+  }
+  .wrap{max-width:1120px;margin:0 auto}
+  h1{font-size:22px;font-weight:680;letter-spacing:.2px;display:flex;align-items:center;gap:10px}
+  h1 em{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.08em;color:#0b0e17;background:#ffd98a;border-radius:6px;padding:3px 8px;transform:translateY(1px)}
+  .sub{color:#8b98b0;font-size:13px;line-height:1.85;margin-top:10px;max-width:790px}
+  .sub b{color:#dbe3f2;font-weight:640}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  .card{background:linear-gradient(165deg,rgba(255,255,255,.055),rgba(255,255,255,.022));
+    border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:20px 20px 18px;
+    box-shadow:0 18px 44px rgba(0,0,0,.32)}
+  .head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .tag{font-size:11px;font-weight:700;letter-spacing:.08em;color:#0b0e17;background:#ffd98a;border-radius:6px;padding:2px 7px}
+  .name{font-size:14.5px;font-weight:660}
+  .desc{font-size:12px;color:#8b98b0;line-height:1.7;min-height:34px}
+  .stage{display:flex;align-items:center;gap:20px;margin:16px 0 14px}
+  .big{width:150px;height:150px;flex:none;filter:drop-shadow(0 10px 22px rgba(0,0,0,.45))}
+  .sizes{display:flex;align-items:flex-end;gap:18px;flex:1}
+  .sizes figure{display:flex;flex-direction:column;align-items:center;gap:7px}
+  .sizes figcaption{font-size:10.5px;color:#6c7a95;letter-spacing:.04em}
+  .chip{display:flex;gap:12px;padding:10px 12px;border-radius:13px;align-items:center}
+  .chip.light{background:#eef1f7}
+  .chip.dark{background:#11162a}
+  .chip span{font-size:10.5px;color:#6c7a95}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .s96{width:96px;height:96px}.s64{width:64px;height:64px}
+  .s32{width:32px;height:32px}.s22{width:22px;height:22px}
+  svg{display:block;width:100%;height:100%}
+  .foot{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);
+    color:#6c7a95;font-size:12px;line-height:1.9}
+  .foot code{color:#a9b6cd;background:rgba(255,255,255,.06);padding:1px 6px;border-radius:5px;font-size:11.5px}
+</style></head><body>
+<div class="wrap">
+  <h1>WorkBuddy 看板 · 图标样品 <em>v2</em></h1>
+  <p class="sub">统一规则：<b>深蓝底 + 金色主色</b>（和看板深色玻璃、暴富喵配色一致），只用大色块、不靠细线和小字，保证 <b>32 / 22px</b> 还认得出。每款左边大图，右边是 96 / 64 / 32 / 22 的真实大小，最下一行看浅色、深色背景下的观感。<b>选个编号</b>（也可以说「B 的猫脸 + E 的字标」这种混搭），我再出 icns / ico。</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="head"><span class="tag">A</span><span class="name">猫头 W</span></div>
+      <div class="desc">同一个猫头，面罩里换成金色 W：品牌字标 + 宠物形象一次说完。</div>
+      <div class="stage">
+        <div class="big"><svg viewBox="0 0 1024 1024"><use href="#ico-a"/></svg></div>
+        <div class="sizes">
+          <figure><svg class="s96" viewBox="0 0 1024 1024"><use href="#ico-a"/></svg><figcaption>96</figcaption></figure>
+          <figure><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-a"/></svg><figcaption>64</figcaption></figure>
+          <figure><svg class="s32" viewBox="0 0 1024 1024"><use href="#ico-a"/></svg><figcaption>32</figcaption></figure>
+          <figure><svg class="s22" viewBox="0 0 1024 1024"><use href="#ico-a"/></svg><figcaption>22</figcaption></figure>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="chip light"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-a"/></svg><span>浅色背景</span></div>
+        <div class="chip dark"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-a"/></svg><span>深色背景</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="head"><span class="tag">B</span><span class="name">金币猫头（推荐）</span></div>
+      <div class="desc">暴富喵本体：深蓝面罩 + 金色笑眼 + 一枚金元宝。亲和、有记忆点。</div>
+      <div class="stage">
+        <div class="big"><svg viewBox="0 0 1024 1024"><use href="#ico-b"/></svg></div>
+        <div class="sizes">
+          <figure><svg class="s96" viewBox="0 0 1024 1024"><use href="#ico-b"/></svg><figcaption>96</figcaption></figure>
+          <figure><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-b"/></svg><figcaption>64</figcaption></figure>
+          <figure><svg class="s32" viewBox="0 0 1024 1024"><use href="#ico-b"/></svg><figcaption>32</figcaption></figure>
+          <figure><svg class="s22" viewBox="0 0 1024 1024"><use href="#ico-b"/></svg><figcaption>22</figcaption></figure>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="chip light"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-b"/></svg><span>浅色背景</span></div>
+        <div class="chip dark"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-b"/></svg><span>深色背景</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="head"><span class="tag">C</span><span class="name">猫爪＋金币</span></div>
+      <div class="desc">四个趾垫 + 一枚当掌垫的金币，最抽象也最好认，远看就是一个爪印。</div>
+      <div class="stage">
+        <div class="big"><svg viewBox="0 0 1024 1024"><use href="#ico-c"/></svg></div>
+        <div class="sizes">
+          <figure><svg class="s96" viewBox="0 0 1024 1024"><use href="#ico-c"/></svg><figcaption>96</figcaption></figure>
+          <figure><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-c"/></svg><figcaption>64</figcaption></figure>
+          <figure><svg class="s32" viewBox="0 0 1024 1024"><use href="#ico-c"/></svg><figcaption>32</figcaption></figure>
+          <figure><svg class="s22" viewBox="0 0 1024 1024"><use href="#ico-c"/></svg><figcaption>22</figcaption></figure>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="chip light"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-c"/></svg><span>浅色背景</span></div>
+        <div class="chip dark"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-c"/></svg><span>深色背景</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="head"><span class="tag">D</span><span class="name">金币猫脸</span></div>
+      <div class="desc">整枚金币就是猫脸：耳尖从币缘探出，币内是暴富喵的笑眼。最“暴富”。</div>
+      <div class="stage">
+        <div class="big"><svg viewBox="0 0 1024 1024"><use href="#ico-d"/></svg></div>
+        <div class="sizes">
+          <figure><svg class="s96" viewBox="0 0 1024 1024"><use href="#ico-d"/></svg><figcaption>96</figcaption></figure>
+          <figure><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-d"/></svg><figcaption>64</figcaption></figure>
+          <figure><svg class="s32" viewBox="0 0 1024 1024"><use href="#ico-d"/></svg><figcaption>32</figcaption></figure>
+          <figure><svg class="s22" viewBox="0 0 1024 1024"><use href="#ico-d"/></svg><figcaption>22</figcaption></figure>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="chip light"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-d"/></svg><span>浅色背景</span></div>
+        <div class="chip dark"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-d"/></svg><span>深色背景</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="head"><span class="tag">E</span><span class="name">极简 W ＋ 星币</span></div>
+      <div class="desc">只有字标和一个币点，右上留白干净；最像成熟 SaaS，但没宠物味。</div>
+      <div class="stage">
+        <div class="big"><svg viewBox="0 0 1024 1024"><use href="#ico-e"/></svg></div>
+        <div class="sizes">
+          <figure><svg class="s96" viewBox="0 0 1024 1024"><use href="#ico-e"/></svg><figcaption>96</figcaption></figure>
+          <figure><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-e"/></svg><figcaption>64</figcaption></figure>
+          <figure><svg class="s32" viewBox="0 0 1024 1024"><use href="#ico-e"/></svg><figcaption>32</figcaption></figure>
+          <figure><svg class="s22" viewBox="0 0 1024 1024"><use href="#ico-e"/></svg><figcaption>22</figcaption></figure>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="chip light"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-e"/></svg><span>浅色背景</span></div>
+        <div class="chip dark"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-e"/></svg><span>深色背景</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="head"><span class="tag">F</span><span class="name">看板＋探头猫</span></div>
+      <div class="desc">猫头从看板卡边上探出来，有故事感；小尺寸靠“卡片+两只耳朵”识别。</div>
+      <div class="stage">
+        <div class="big"><svg viewBox="0 0 1024 1024"><use href="#ico-f"/></svg></div>
+        <div class="sizes">
+          <figure><svg class="s96" viewBox="0 0 1024 1024"><use href="#ico-f"/></svg><figcaption>96</figcaption></figure>
+          <figure><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-f"/></svg><figcaption>64</figcaption></figure>
+          <figure><svg class="s32" viewBox="0 0 1024 1024"><use href="#ico-f"/></svg><figcaption>32</figcaption></figure>
+          <figure><svg class="s22" viewBox="0 0 1024 1024"><use href="#ico-f"/></svg><figcaption>22</figcaption></figure>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="chip light"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-f"/></svg><span>浅色背景</span></div>
+        <div class="chip dark"><svg class="s64" viewBox="0 0 1024 1024"><use href="#ico-f"/></svg><span>深色背景</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="foot">
+    定稿后一次产出：<code>icon.icns</code>（macOS 16–1024 全尺寸）、<code>icon.ico</code>（Windows）、<code>icon.png</code> 1024，
+    并把登录页那个「W」小徽标、看板顶部小图标一起换成同款简化版（另一个色系会自动配好浅色底版本）。
+  </p>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c2743"/><stop offset="0.52" stop-color="#121a2e"/><stop offset="1" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0.1" y1="0" x2="0.75" y2="1">
+      <stop offset="0" stop-color="#ffe9b4"/><stop offset="0.4" stop-color="#ffd075"/><stop offset="1" stop-color="#d4913a"/>
+    </linearGradient>
+    <linearGradient id="gold2" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#ffe1a0"/><stop offset="1" stop-color="#dd9c40"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.26" cy="0.12" r="0.9">
+      <stop offset="0" stop-color="#6b8cff" stop-opacity="0.32"/>
+      <stop offset="0.5" stop-color="#6b8cff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#6b8cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="visor" x1="0.15" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#26314f"/><stop offset="1" stop-color="#0a0f1b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- A -->
+  <symbol id="ico-a" viewBox="0 0 1024 1024">
+    <rect width="1024" height="1024" rx="230" fill="url(#navy)"/>
+    <rect width="1024" height="1024" rx="230" fill="url(#glow)"/>
+    <path d="M296 344 L322 168 L466 274 Z" fill="url(#gold)"/>
+    <path d="M728 344 L702 168 L558 274 Z" fill="url(#gold)"/>
+    <rect x="252" y="272" width="520" height="452" rx="196" fill="url(#visor)"
+          stroke="#f0c66b" stroke-opacity=".62" stroke-width="22"/>
+    <path d="M370 462 L438 626 L512 500 L586 626 L654 462"
+          fill="none" stroke="url(#gold)" stroke-width="58"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- B -->
+  <symbol id="ico-b" viewBox="0 0 1024 1024">
+    <rect width="1024" height="1024" rx="230" fill="url(#navy)"/>
+    <rect width="1024" height="1024" rx="230" fill="url(#glow)"/>
+    <path d="M296 344 L322 168 L466 274 Z" fill="url(#gold)"/>
+    <path d="M728 344 L702 168 L558 274 Z" fill="url(#gold)"/>
+    <rect x="252" y="272" width="520" height="452" rx="196" fill="url(#visor)"
+          stroke="#f0c66b" stroke-opacity=".62" stroke-width="22"/>
+    <path d="M374 476 q 62 -78 124 0" fill="none" stroke="url(#gold2)" stroke-width="44" stroke-linecap="round"/>
+    <path d="M526 476 q 62 -78 124 0" fill="none" stroke="url(#gold2)" stroke-width="44" stroke-linecap="round"/>
+    <circle cx="722" cy="742" r="158" fill="#000" fill-opacity=".38"/>
+    <circle cx="706" cy="720" r="158" fill="url(#gold)"/>
+    <circle cx="706" cy="720" r="118" fill="none" stroke="#8c5a12" stroke-opacity=".38" stroke-width="12"/>
+    <text x="706" y="784" text-anchor="middle" font-family="PingFang SC,system-ui" font-size="184" font-weight="800" fill="#7a4a0c">¥</text>
+  </symbol>
+
+  <!-- C -->
+  <symbol id="ico-c" viewBox="0 0 1024 1024">
+    <rect width="1024" height="1024" rx="230" fill="url(#navy)"/>
+    <rect width="1024" height="1024" rx="230" fill="url(#glow)"/>
+    <ellipse cx="316" cy="486" rx="60" ry="76" fill="url(#gold2)" transform="rotate(-24 316 486)"/>
+    <ellipse cx="448" cy="430" rx="58" ry="74" fill="url(#gold2)" transform="rotate(-8 448 430)"/>
+    <ellipse cx="580" cy="430" rx="58" ry="74" fill="url(#gold2)" transform="rotate(8 580 430)"/>
+    <ellipse cx="712" cy="486" rx="60" ry="76" fill="url(#gold2)" transform="rotate(24 712 486)"/>
+    <circle cx="512" cy="768" r="172" fill="url(#gold)"/>
+    <circle cx="512" cy="768" r="132" fill="none" stroke="#8c5a12" stroke-opacity=".32" stroke-width="11"/>
+    <text x="512" y="826" text-anchor="middle" font-family="PingFang SC,system-ui" font-size="172" font-weight="800" fill="#7a4a0c">¥</text>
+  </symbol>
+
+  <!-- D -->
+  <symbol id="ico-d" viewBox="0 0 1024 1024">
+    <rect width="1024" height="1024" rx="230" fill="url(#navy)"/>
+    <rect width="1024" height="1024" rx="230" fill="url(#glow)"/>
+    <path d="M292 336 L336 148 L492 262 Z" fill="url(#gold)"/>
+    <path d="M732 336 L688 148 L532 262 Z" fill="url(#gold)"/>
+    <circle cx="512" cy="560" r="326" fill="url(#gold)"/>
+    <circle cx="512" cy="560" r="266" fill="url(#visor)"/>
+    <path d="M356 552 q 66 -82 132 0" fill="none" stroke="url(#gold2)" stroke-width="46" stroke-linecap="round"/>
+    <path d="M536 552 q 66 -82 132 0" fill="none" stroke="url(#gold2)" stroke-width="46" stroke-linecap="round"/>
+    <path d="M320 372 a 326 326 0 0 1 136 -70" fill="none" stroke="#fff" stroke-opacity=".48" stroke-width="16" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- E -->
+  <symbol id="ico-e" viewBox="0 0 1024 1024">
+    <rect width="1024" height="1024" rx="230" fill="url(#navy)"/>
+    <rect width="1024" height="1024" rx="230" fill="url(#glow)"/>
+    <path d="M246 356 L378 800 L512 520 L646 800 L778 356"
+          fill="none" stroke="url(#gold)" stroke-width="126"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="842" cy="196" r="82" fill="url(#gold2)"/>
+    <circle cx="842" cy="196" r="42" fill="none" stroke="#7a4a0c" stroke-opacity=".42" stroke-width="19"/>
+  </symbol>
+
+  <!-- F -->
+  <symbol id="ico-f" viewBox="0 0 1024 1024">
+    <rect width="1024" height="1024" rx="230" fill="url(#navy)"/>
+    <rect width="1024" height="1024" rx="230" fill="url(#glow)"/>
+    <path d="M420 408 L436 286 L520 352 Z" fill="url(#gold)"/>
+    <path d="M604 408 L588 286 L504 352 Z" fill="url(#gold)"/>
+    <rect x="410" y="352" width="204" height="136" rx="64" fill="url(#visor)"
+          stroke="#f0c66b" stroke-opacity=".58" stroke-width="14"/>
+    <path d="M450 424 q 34 -42 68 0" fill="none" stroke="url(#gold2)" stroke-width="26" stroke-linecap="round"/>
+    <path d="M508 424 q 34 -42 68 0" fill="none" stroke="url(#gold2)" stroke-width="26" stroke-linecap="round"/>
+    <rect x="236" y="486" width="552" height="316" rx="76" fill="#243354"/>
+    <rect x="236" y="486" width="552" height="316" rx="76" fill="none" stroke="#f0c66b" stroke-opacity=".34" stroke-width="12"/>
+    <rect x="300" y="572" width="182" height="34" rx="17" fill="url(#gold)"/>
+    <rect x="300" y="640" width="300" height="26" rx="13" fill="#93a7cd" fill-opacity=".5"/>
+    <rect x="300" y="694" width="214" height="26" rx="13" fill="#93a7cd" fill-opacity=".3"/>
+  </symbol>
+</svg>
+</body></html>

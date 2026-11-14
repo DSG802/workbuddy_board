@@ -1,0 +1,4 @@
+#!/bin/sh
+# PyInstaller 在 x86_64 进程里调 lipo 时，shim 会去 dlopen 只有 arm64 的 libxcrun 而失败；
+# 这里强制用原生 arm64 跑一次系统 lipo，交叉瘦身照样成立。
+exec arch -arm64 /usr/bin/lipo "$@"

@@ -1,0 +1,58 @@
+# 看板反代示例：nginx 与容器 workbuddy-new:8080 在同一个 docker network 上。
+# 改两处即可用：server_name、证书路径。
+#
+# 两个必须保留的点：
+#   1) resolver + 变量代理：直接写上游容器名会让 nginx 在启动时解析，
+#      上游没起来就整机 emerg host not found in upstream。
+#   2) 扫码是 1.5s 一次的轮询，proxy_read_timeout 不要低于 30s。
+
+server {
+    listen      80;
+    server_name dashboard.example.com;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen       443 ssl;
+    http2        on;
+    server_name  dashboard.example.com;
+
+    ssl_certificate     /etc/nginx/ssl/fullchain.pem;
+    ssl_certificate_key /etc/nginx/ssl/privkey.pem;
+    ssl_protocols       TLSv1.2 TLSv1.3;
+    ssl_session_cache   shared:SSL:10m;
+    ssl_session_timeout 1h;
+
+    # 可选：站点级访问口令，默认不需要；要加就取消下面两行注释并准备 htpasswd。
+    # auth_basic           "restricted";
+    # auth_basic_user_file /etc/nginx/htpasswd;
+
+    # 宠物雪碧图：公开素材，无需口令
+    location /pets/ {
+        alias /usr/share/nginx/html/pets/;
+        expires 7d;
+        access_log off;
+    }
+
+    location = /favicon.ico { return 204; }
+
+    location / {
+        resolver 127.0.0.11 valid=10s;
+        set $up workbuddy-new:8080;
+        proxy_pass http://$up;
+
+        proxy_http_version 1.1;
+        proxy_set_header Host              $host;
+        proxy_set_header X-Real-IP         $remote_addr;
+        proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # 已压缩的响应会破坏部分轮询接口的解析，这里让上游回明文
+        proxy_set_header Accept-Encoding "";
+
+        # 扫码状态轮询：1.5s 一次
+        proxy_read_timeout 60s;
+
+        add_header Cache-Control "private, no-cache" always;
+    }
+}

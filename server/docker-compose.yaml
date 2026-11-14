@@ -1,0 +1,44 @@
+name: workbuddy_new
+
+# 容器不映射端口，只接入外部网络，由同网络的 nginx 反代（见 nginx/dashboard.conf.example）。
+# 网络名按你的环境改：这里假设已存在一个名为 web 的 docker network。
+services:
+  dashboard:
+    build: .
+    image: workbuddy-new:latest
+    container_name: workbuddy-new
+    restart: unless-stopped
+    working_dir: /app
+    command: ["python", "-u", "/app/checkin.py"]
+    env_file:
+      - .env
+    environment:
+      TZ: Asia/Shanghai
+      STATE_DIR: /state
+      PET_DIR: /pets
+      LOGIN_DIR: /tmp/wb-login
+    volumes:
+      - ./app:/app:ro
+      - ./state:/state          # 持久化：SQLite、会话、令牌（600）
+      - ../pets:/pets:ro        # 宠物雪碧图（仓库自带，只读）
+    # 无头 Chromium 需要：共享内存别太小、seccomp 放开（容器内已加 --no-sandbox）
+    shm_size: 512m
+    security_opt:
+      - seccomp:unconfined
+    networks:
+      - web
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://127.0.0.1:8080/health',timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 25s
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "3"
+
+networks:
+  web:
+    external: true

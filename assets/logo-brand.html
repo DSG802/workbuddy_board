@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>WorkBuddy 看板 · 图标定稿</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(120% 60% at 50% 0%,#1a2236 0%,#0b0e17 58%,#070910 100%);
+    color:#e8edf7;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;padding:44px 40px 60px}
+  .wrap{max-width:1040px;margin:0 auto}
+  h1{font-size:22px;font-weight:680;display:flex;align-items:center;gap:10px}
+  h1 em{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.08em;color:#0b0e17;background:#ffd98a;border-radius:6px;padding:3px 8px}
+  .sub{color:#8b98b0;font-size:13px;line-height:1.85;margin-top:10px;max-width:780px}
+  .sub b{color:#dbe3f2;font-weight:640}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+  @media(max-width:880px){.duo{grid-template-columns:1fr}}
+  .panel{border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:22px 22px 18px;
+    background:linear-gradient(165deg,rgba(255,255,255,.055),rgba(255,255,255,.022));
+    box-shadow:0 18px 44px rgba(0,0,0,.32)}
+  .panel.light{border-color:rgba(11,18,32,.10);background:#eef2f9}
+  .ptitle{font-size:13px;font-weight:660;letter-spacing:.02em;margin-bottom:4px}
+  .panel.light .ptitle{color:#0b1220}
+  .pdesc{font-size:11.5px;color:#8b98b0;margin-bottom:16px;line-height:1.7}
+  .panel.light .pdesc{color:#5b6b86}
+  .hero{width:190px;height:190px;border-radius:44px;filter:drop-shadow(0 14px 30px rgba(0,0,0,.4))}
+  .panel.light .hero{filter:drop-shadow(0 12px 26px rgba(15,23,42,.16))}
+  .ladder{display:flex;align-items:flex-end;gap:18px;margin-top:22px}
+  .ladder figure{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .ladder figcaption{font-size:10.5px;color:#6c7a95}
+  .panel.light .ladder figcaption{color:#7b89a3}
+  .use{margin-top:26px;border:1px solid rgba(255,255,255,.09);border-radius:18px;overflow:hidden}
+  .use .row{display:flex;align-items:center;gap:12px;padding:16px 20px;font-size:13px}
+  .use .row.dark{background:#0b0e17;color:#e8edf7}
+  .use .row.lt{background:#e7ecf7;color:#0b1220}
+  .use .row .tag{font-size:11px;color:#6c7a95;margin-left:auto}
+  .use svg{flex:none}
+  .files{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+  .f{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);border-radius:12px;
+    padding:11px 14px;font-size:12px;color:#a9b6cd}
+  .f b{display:block;color:#e8edf7;font-size:12.5px;font-weight:640;margin-bottom:3px}
+  .f code{font-size:11px;color:#7d8ba6}
+</style></head><body>
+<div class="wrap">
+  <h1>WorkBuddy 看板 · 图标定稿 <em>E</em></h1>
+  <p class="sub">方案 <b>极简 W ＋ 币点</b>：一个金色 W 字标，右上角一枚金币点。做成了<b>明暗两套</b>——深色界面用「深蓝底 + 金色 W」，浅色界面自动换成「白底 + 深藏青 W」，金币保留金色，所以换主题时 logo 不会在浅色页上糊成一坨黑块。</p>
+
+  <div class="duo">
+    <div class="panel">
+      <div class="ptitle">深色版 · 默认</div>
+      <div class="pdesc">App 图标 / Dock / 深色看板 / 登录页</div>
+      <img class="hero" src="logo-dark.svg" alt="深色版">
+      <div class="ladder">
+        <figure><img src="logo-dark.svg" width="64" height="64"><figcaption>64</figcaption></figure>
+        <figure><img src="logo-dark.svg" width="32" height="32"><figcaption>32</figcaption></figure>
+        <figure><img src="logo-dark.svg" width="22" height="22"><figcaption>22</figcaption></figure>
+        <figure><img src="logo-dark.svg" width="16" height="16"><figcaption>16</figcaption></figure>
+      </div>
+    </div>
+    <div class="panel light">
+      <div class="ptitle">浅色版 · 跟随主题</div>
+      <div class="pdesc">浅色看板 / 浅色页面 / 白底物料</div>
+      <img class="hero" src="logo-light.svg" alt="浅色版">
+      <div class="ladder">
+        <figure><img src="logo-light.svg" width="64" height="64"><figcaption>64</figcaption></figure>
+        <figure><img src="logo-light.svg" width="32" height="32"><figcaption>32</figcaption></figure>
+        <figure><img src="logo-light.svg" width="22" height="22"><figcaption>22</figcaption></figure>
+        <figure><img src="logo-light.svg" width="16" height="16"><figcaption>16</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="use">
+    <div class="row dark">
+      <svg viewBox="0 0 1024 1024" width="20" height="20" aria-hidden="true">
+        <rect width="1024" height="1024" rx="230" fill="#121a2e"/>
+        <path d="M252 320 L382 762 L512 492 L642 762 L772 320" fill="none" stroke="#f2c76b" stroke-width="126" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="838" cy="182" r="82" fill="#f2c76b"/><circle cx="838" cy="182" r="42" fill="none" stroke="rgba(122,74,12,.42)" stroke-width="19"/>
+      </svg>
+      深色看板标题行 —— 图标 26px，跟标题同基线
+      <span class="tag">.top h1</span>
+    </div>
+    <div class="row lt">
+      <svg viewBox="0 0 1024 1024" width="20" height="20" aria-hidden="true">
+        <rect width="1024" height="1024" rx="230" fill="#ffffff"/>
+        <path d="M252 320 L382 762 L512 492 L642 762 L772 320" fill="none" stroke="#14203a" stroke-width="126" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="838" cy="182" r="82" fill="#dfa14a"/><circle cx="838" cy="182" r="42" fill="none" stroke="rgba(122,74,12,.5)" stroke-width="19"/>
+      </svg>
+      浅色看板标题行 —— 同一份几何，只换颜色变量
+      <span class="tag">--logo-bg / --logo-w</span>
+    </div>
+  </div>
+
+  <div class="files">
+    <div class="f"><b>icon.icns</b><code>macOS，16–1024 全尺寸</code></div>
+    <div class="f"><b>icon.ico</b><code>Windows，7 个尺寸（16–256）</code></div>
+    <div class="f"><b>icon.png</b><code>1024 主图（= 深色版）</code></div>
+    <div class="f"><b>logo-dark.svg / .png</b><code>深色版源文件</code></div>
+    <div class="f"><b>logo-light.svg / .png</b><code>浅色版源文件</code></div>
+    <div class="f"><b>icon.iconset/</b><code>macOS 打包中间产物</code></div>
+  </div>
+</div>
+</body></html>

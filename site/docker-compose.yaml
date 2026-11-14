@@ -1,0 +1,13 @@
+services:
+  dl:
+    image: nginx:1.29-alpine
+    container_name: dl
+    restart: unless-stopped
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+    networks:
+      - alydocker
+
+networks:
+  alydocker:
+    external: true

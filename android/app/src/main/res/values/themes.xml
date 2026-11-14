@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.WBBoard" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/wb_bg</item>
+        <item name="android:colorBackground">@color/wb_bg</item>
+        <item name="android:statusBarColor">@color/wb_bg</item>
+        <item name="android:navigationBarColor">@color/wb_bg</item>
+        <item name="android:textColorPrimary">@color/wb_fg</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

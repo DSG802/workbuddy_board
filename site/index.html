@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WorkBuddy 看板 · 下载</title>
+<style>
+  :root{
+    --bg:#05070e; --fg:#eef2ff; --fg2:rgba(238,242,255,.66); --fg3:rgba(238,242,255,.42);
+    --panel:rgba(255,255,255,.075); --panel2:rgba(255,255,255,.03);
+    --stroke:rgba(255,255,255,.12); --edge:rgba(255,255,255,.22);
+    --gold:#ffd075; --gold2:#d4913a;
+    --shadow:0 18px 44px rgba(2,6,23,.5);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;background:var(--bg);color:var(--fg)}
+  body{
+    font:15px/1.65 -apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Helvetica Neue",Arial,sans-serif;
+    padding:44px 20px 64px; display:flex; justify-content:center;
+    background:
+      radial-gradient(58vmax 58vmax at 8% -10%, rgba(91,91,245,.34), transparent 62%),
+      radial-gradient(48vmax 48vmax at 96% 4%, rgba(6,182,212,.26), transparent 60%),
+      radial-gradient(52vmax 52vmax at 50% 118%, rgba(217,70,239,.22), transparent 62%),
+      var(--bg);
+  }
+  .wrap{width:100%;max-width:760px}
+  header{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+  .logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.04));
+    border:1px solid var(--stroke);display:grid;place-items:center;box-shadow:inset 0 1px 0 var(--edge),var(--shadow)}
+  h1{font-size:21px;margin:0;letter-spacing:.3px}
+  .sub{color:var(--fg2);font-size:13px;margin:2px 0 0}
+  .meta{color:var(--fg3);font-size:12px;margin:10px 0 26px}
+  .grid{display:grid;gap:14px}
+  .card{
+    display:block;text-decoration:none;color:inherit;position:relative;
+    padding:18px 18px 16px;border-radius:18px;
+    background:radial-gradient(125% 100% at 8% -14%,rgba(255,255,255,.14),transparent 58%),
+               linear-gradient(150deg,var(--panel),var(--panel2));
+    border:1px solid var(--stroke);
+    box-shadow:var(--shadow),inset 0 1px 0 var(--edge),inset 0 -22px 36px -28px rgba(2,6,23,.55);
+    transition:transform .18s ease,border-color .18s ease,background .18s ease;
+  }
+  .card:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
+  .card:active{transform:translateY(0)}
+  .row{display:flex;align-items:center;gap:14px}
+  .ico{width:42px;height:42px;border-radius:12px;flex:0 0 auto;display:grid;place-items:center;
+    background:rgba(255,255,255,.08);border:1px solid var(--stroke);font-size:20px}
+  .t{font-weight:600;font-size:16px}
+  .d{color:var(--fg2);font-size:12.5px;margin-top:2px}
+  .btn{margin-left:auto;flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;
+    padding:9px 16px;border-radius:999px;font-size:13.5px;font-weight:600;color:#241703;
+    background:linear-gradient(160deg,var(--gold),var(--gold2));border:1px solid rgba(255,255,255,.35);
+    box-shadow:0 8px 20px rgba(212,145,58,.28),inset 0 1px 0 rgba(255,255,255,.5)}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .tag{font-size:11.5px;color:var(--fg2);padding:3px 9px;border-radius:999px;
+    background:rgba(255,255,255,.06);border:1px solid var(--stroke)}
+  .note{margin-top:22px;padding:16px 18px;border-radius:16px;
+    background:linear-gradient(150deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+    border:1px solid var(--stroke);font-size:13px;color:var(--fg2)}
+  .note h2{font-size:13.5px;color:var(--fg);margin:0 0 8px;letter-spacing:.3px}
+  .note ul{margin:0;padding-left:18px}
+  .note li{margin:5px 0}
+  details{margin-top:14px;font-size:12.5px;color:var(--fg3)}
+  summary{cursor:pointer;outline:none}
+  code{font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--fg2);
+    background:rgba(255,255,255,.06);padding:1px 6px;border-radius:6px;word-break:break-all}
+  footer{margin-top:26px;text-align:center;color:var(--fg3);font-size:12px}
+  @media (max-width:520px){
+    body{padding:26px 14px 44px}
+    .row{flex-wrap:wrap}
+    .btn{margin-left:0;width:100%;justify-content:center;order:3;margin-top:10px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">
+      <svg width="26" height="26" viewBox="0 0 1024 1024" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0.1" y1="0" x2="0.75" y2="1">
+          <stop offset="0" stop-color="#ffe9b4"/><stop offset=".4" stop-color="#ffd075"/><stop offset="1" stop-color="#d4913a"/>
+        </linearGradient></defs>
+        <path d="M252 320 L382 762 L512 492 L642 762 L772 320" fill="none" stroke="url(#g)" stroke-width="126" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="838" cy="182" r="82" fill="url(#g)"/>
+      </svg>
+    </div>
+    <div>
+      <h1>WorkBuddy 看板</h1>
+      <p class="sub">自动签到 · 余额流水 · 宠物旅行 · 多账户聚合</p>
+    </div>
+  </header>
+
+  <div class="meta">版本 v8 · 构建于 2026-11-14</div>
+
+  <div class="note" style="border-color:rgba(120,170,255,.30);background:linear-gradient(150deg,rgba(91,140,255,.11),rgba(139,92,246,.055))">
+    <h2>v8 更新（2026-11-14）</h2>
+    <ul>
+      <li><b>版本号统一</b>：桌面端、安卓端、Windows 端改用同一套编号，此前 v1.0.x 与 v6/v7 两套序列并存，同一个版本在安装包里看不出区别。</li>
+      <li><b>页脚显示真实构建标记</b>：以前固定显示 <code>2026-11-13.2205</code>，现在写的是实际打包时刻，四个平台的包能对上同一个值。装完可以直接核对是不是同一批。</li>
+      <li>功能与上一版一致，行为无变化：新宠物照常上舞台（含无图时的首字占位）、多账户刷新会补图、补图失败一小时冷却、内置大圣喵图集。</li>
+    </ul>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="./files/WorkBuddyBoard-android-v8-20261114.apk" download>
+      <div class="row">
+        <div class="ico">🤖</div>
+        <div>
+          <div class="t">Android 版</div>
+          <div class="d">APK · 21.1 MB · arm64-v8a</div>
+        </div>
+        <span class="btn">下载 APK</span>
+      </div>
+      <div class="tags"><span class="tag">Android 7.0+</span><span class="tag">微信扫码 / 短信登录</span><span class="tag">无需电脑</span></div>
+    </a>
+
+    <a class="card" href="./files/WorkBuddyBoard-mac-arm64-v8-20261114.dmg" download>
+      <div class="row">
+        <div class="ico">🍎</div>
+        <div>
+          <div class="t">macOS · Apple Silicon</div>
+          <div class="d">DMG · 15.7 MB · M1 / M2 / M3 / M4</div>
+        </div>
+        <span class="btn">下载</span>
+      </div>
+      <div class="tags"><span class="tag">macOS 12+</span><span class="tag">原生 App</span></div>
+    </a>
+
+    <a class="card" href="./files/WorkBuddyBoard-mac-intel-v8-20261114.dmg" download>
+      <div class="row">
+        <div class="ico">🖥️</div>
+        <div>
+          <div class="t">macOS · Intel</div>
+          <div class="d">DMG · 16.0 MB · x86_64</div>
+        </div>
+        <span class="btn">下载</span>
+      </div>
+      <div class="tags"><span class="tag">macOS 12+</span><span class="tag">x86_64 芯片</span></div>
+    </a>
+    <a class="card" href="./files/WorkBuddyBoard-win-x64-v8-20261114.exe" download>
+      <div class="row">
+        <div class="ico">🪟</div>
+        <div>
+          <div class="t">Windows · x64</div>
+          <div class="d">EXE · 14.6 MB · 单文件免安装</div>
+        </div>
+        <span class="btn">下载</span>
+      </div>
+      <div class="tags"><span class="tag">Windows 10/11</span><span class="tag">双击即用</span><span class="tag">无需解压</span></div>
+    </a>
+  </div>
+
+  <div class="note">
+    <h2>安装提示</h2>
+    <ul>
+      <li><b>Android</b>：下载后点击安装，首次会提示「未知来源应用」，允许即可（自签名证书）。</li>
+      <li><b>macOS</b>：未做 Apple 公证，首次打开请<b>右键 →「打开」</b>；若被拦截，可在终端执行
+        <code>xattr -dr com.apple.quarantine /Applications/WorkBuddyBoard.app</code>。</li>
+      <li><b>Windows</b>：只有一个 exe，双击运行，不需要解压也不需要安装。首次运行若提示
+        「Windows 已保护你的电脑」，点<b>更多信息 → 仍要运行</b>（未做代码签名，不是病毒）。</li>
+      <li>同一个账户不要同时挂服务器版和桌面版，否则会互相抢占会话。</li>
+      <li>手机端在系统冻结后台时不会定时签到；<b>打开 App 会立刻补跑一轮</b>。</li>
+    </ul>
+    <details>
+      <summary>校验值（SHA-256）</summary>
+      <p style="margin:8px 0 0">
+        Android：<code>42fa90e73ac3890c18ff9eb77487ca0407cebe1c37b281faef77217aaec63dd2</code><br>
+        Apple Silicon：<code>f65b2f8545949105d8abd5171d3037f1ddf32fcf4f39d40e5ee170b4fa726775</code><br>
+        Intel：<code>710df1ad2c364413a86752359de7fec39fd53c1489f6314448a1b54b0381d97e</code><br>
+        Windows x64：<code>73e32262f2f49b3b500f1c2f55ffd681ed2422245a21a2f491b7a300ca846301</code>
+      </p>
+    </details>
+  </div>
+
+  <footer>低调自用 · 有问题直接找我</footer>
+</div>
+</body>
+</html>
